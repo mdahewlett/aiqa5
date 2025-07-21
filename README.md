@@ -7,7 +7,10 @@
 - [x] Connected git
 - [x] Add FE component
 - [x] Add password + rate limiting + llm to BE
-- [ ] add dockers, docker-compose, nginx
+- [x] add dockers, docker-compose, nginx
+- [ ] setup and deploy to VPS
+- [ ] add HTTPS via certbot & Let's Encrypt
+- [ ] Github actions
 
 ## Notes
 
@@ -15,3 +18,5 @@
 - forgot the path as part of @app.POST("path")
 - OpenAI forgot 'content' as end of response, and 'content' as part of message list
 - password protect, slowapi rate limiting still slow
+- missing $ in FE dockerfile for VITE_API_URL=$VITE_API_URL so was not hitting BE
+- added nginx back into dockerfile for dev and prod, separate nginx conf for dev and prod
