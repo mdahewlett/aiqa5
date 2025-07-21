@@ -33,6 +33,18 @@ function App() {
         body: JSON.stringify({ query })
       })
   
+      if (res.status === 401) {
+        setResponse("You entered an incorrect password. Refresh the page and try again.");
+        setQuery("");
+        return;
+      }
+
+      if (res.status === 429) {
+        setResponse("You have exceeded your limit, please try again in a minute.");
+        setQuery("");
+        return;
+      }
+
       const data = await res.json()
       setResponse(data.response);
     } catch (err) {
@@ -45,7 +57,7 @@ function App() {
   const handleQueryKeydown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
-      handleClick
+      handleClick()
     }
   }
 
