@@ -14,7 +14,7 @@ services:
     build:
       context: ./frontend
       args:
-        VITE_API_URL: http://buld.site
+        VITE_API_URL: https://buld.site
     restart: always
     depends_on:
       - backend
@@ -27,6 +27,7 @@ services:
       - ./nginx/prod.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - backend
       - frontend
