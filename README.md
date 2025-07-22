@@ -2,14 +2,16 @@
 
 ## This time around
 
+The main change was to go back through the deployment and straighten out the order of setting up the server. Next time will be much faster!
+
 - [x] Setup FE - vite, tailwindcss, shadcn, lucide, added favicon and tab text, removed template text
 - [x] Setup BE - venv, fastapi, uvicorn, openai, dotenv, added get healthcheck and post, cors, .env
 - [x] Connected git
 - [x] Add FE component
 - [x] Add password + rate limiting + llm to BE
 - [x] add dockers, docker-compose, nginx
-- [ ] setup and deploy to VPS
-- [ ] add HTTPS via certbot & Let's Encrypt
+- [x] setup and deploy to VPS
+- [x] add HTTPS via certbot & Let's Encrypt
 - [ ] Github actions
 
 ## Notes
